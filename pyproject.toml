@@ -1,0 +1,17 @@
+[project]
+name = "event-of-code-2023"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "funfried", email = "florian.unfried@ionos.com"},
+]
+dependencies = [
+    "loguru>=0.7.2",
+]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
