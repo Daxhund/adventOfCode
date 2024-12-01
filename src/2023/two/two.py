@@ -1,5 +1,4 @@
 from typing import Dict, List, Optional
-from dataclasses import dataclass
 from loguru import logger
 
 
@@ -51,27 +50,27 @@ class Two:
 
 def test() -> None:
     games_data: Dict[str, List[Dict[str, int]]] = {
-        "Game 1": [
+        "1": [
             {"blue": 3, "red": 4},
             {"red": 1, "green": 2, "blue": 6},
             {"green": 2},
         ],
-        "Game 2": [
+        "2": [
             {"blue": 1, "green": 2},
             {"green": 3, "blue": 4, "red": 1},
             {"green": 1, "blue": 1},
         ],
-        "Game 3": [
+        "3": [
             {"green": 8, "blue": 6, "red": 20},
             {"blue": 5, "red": 4, "green": 13},
             {"green": 5, "red": 1},
         ],
-        "Game 4": [
+        "4": [
             {"green": 1, "red": 3, "blue": 6},
             {"green": 3, "red": 6},
             {"green": 3, "blue": 15, "red": 14},
         ],
-        "Game 5": [
+        "5": [
             {"red": 6, "blue": 1, "green": 3},
             {"blue": 2, "red": 1, "green": 2},
         ],
@@ -80,8 +79,14 @@ def test() -> None:
     bag.print_content()
 
     two = Two(bag=bag)
-    for name, data in games_data.items():
-        print(f" Game {name} is valid: {two.is_valid_game(data)}")
+    print("Check if valid:")
+    for game_id, data in games_data.items():
+        sum_result = 0
+        is_valid = two.is_valid_game(data)
+        if is_valid:
+            sum_result += int(game_id)
+        print(f"- Game {game_id} is valid: {is_valid}")
+    print(f"sum of games: {sum_result}")
 
 
 if __name__ == "__main__":
