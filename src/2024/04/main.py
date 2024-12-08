@@ -56,7 +56,7 @@ class Puzzle:
     def get_adjacent_values(
         self, i: int, j: int, length_word: int = 4, diagonal_only: bool = False
     ) -> List[str]:
-        #assert length_word <= self.PADDING_SIZE  # lazy check
+        # assert length_word <= self.PADDING_SIZE  # lazy check
 
         adjacent_words: List[List[str]] = []
         # +n due to the padding
@@ -124,11 +124,13 @@ class Puzzle:
                             x, y, length_word=2, diagonal_only=True
                         )
                     ]
-                    #print(fragments)
-                    if ord(fragments[0]) + ord(fragments[3]) == 160 and ord(fragments[1]) + ord(fragments[2]) == 160:
-                        print(f"{fragments[0]}-{fragments[1]}")
-                        print(f"{fragments[2]}-{fragments[3]}")
-                        print("####")
+                    if (
+                        ord(fragments[0]) + ord(fragments[3]) == 160
+                        and ord(fragments[1]) + ord(fragments[2]) == 160
+                    ):
+                        # print(f"{fragments[0]}-{fragments[1]}")
+                        # print(f"{fragments[2]}-{fragments[3]}")
+                        # print("####")
                         counter += 1
         return counter
 
