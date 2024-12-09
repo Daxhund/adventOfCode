@@ -1,7 +1,7 @@
-from typing import List, Tuple
-import re
 import math
+import re
 from dataclasses import dataclass
+from typing import List, Tuple
 
 
 @dataclass

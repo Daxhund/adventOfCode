@@ -1,6 +1,7 @@
-from typing import Dict, List, Optional, Tuple
-from loguru import logger
 import re
+from typing import Dict, List, Optional, Tuple
+
+from loguru import logger
 
 
 class Schematics:

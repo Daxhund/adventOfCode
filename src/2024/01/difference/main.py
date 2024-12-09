@@ -1,7 +1,6 @@
 import re
 from typing import List
 
-
 if __name__ == "__main__":
     with open("src/2024/01/input2.txt", encoding="utf-8") as fh:
         data: List[str] = fh.readlines()
