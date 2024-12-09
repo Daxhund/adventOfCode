@@ -1,5 +1,5 @@
 [project]
-name = "event-of-code-2023"
+name = "event-of-code"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
