@@ -3,7 +3,7 @@ name = "event-of-code"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
-    {name = "funfried", email = "florian.unfried@ionos.com"},
+    {name = "funfried", email = "florian.unfried@gmx.de"},
 ]
 dependencies = [
     "loguru>=0.7.2",
